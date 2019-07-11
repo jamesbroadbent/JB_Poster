@@ -1,0 +1,113 @@
+---
+title: Peptide specificity in the UniProt
+business_unit: Agriculture and Food
+theme: midday #options are midday, blueberry, sky, teal, mint, and forest
+
+author:  "**James A. Broadbent**"
+github_link: github.com/jamesbroadbent/SynBroad.git
+#dap_link: https://doi.org/10.4225/08/5756169E381CC # optional
+photo: resources/img/image.png
+
+title_textsize: 140pt         # Poster title fontsize
+
+# A0 portrait size. Only option for now.
+poster_height: "1189mm" # height in inches of poster
+poster_width: "841mm" # width in inches of poster
+
+output: 
+  posterdown::posterdown_html:
+    self_contained: FALSE
+    number_sections: FALSE
+    template: resources/html/template.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  results = 'asis',
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = 'center'
+)
+
+#Load libraries
+library(tidyverse)
+library(gapminder)
+library(gganimate)
+library(kableExtra)
+```
+
+
+# Introduction
+I am an analytical chemist from the Molecular Analysis team based in St Lucia, QLD. Our team specializes in proteome analysis, the large scale investigation of proteins. I had some experience with R prior to dataschool but now I am also happy to write in Python and see opportunities to code on a daily basis!
+
+# My Synthesis Project
+Food contaminants are a common cause of alergic reaction. Accurate food labelling is critical for cunsumers to make informed decisions regarding their choice of foods. Our laboratory specialises in the detection of food components or contaminants using the analytical chemistry technique known as liquid chromatography - mass spectrometry. The specific components that we detect are called peptides. These compounds are bio-polymers, which are produced when proteins are chopped into smaller pieces using an enzyme. The resulting peptide sequences may be specific to a single protein in a single species, or may be found in multiple different proteins and/or species. It is important to know how many and which species a peptide may be found in, so that when a peptide is used to detect and quantify a contaminant, one can be certain that the peptide is specific for the target contaminant.
+
+This project set out to access the Universal protein resource (UniProt) to retrieve species specificity information for any list of peptides. This information can then be used to determine if a peptide is suitable as a proxy when measuring a food component or contaminant.
+
+# My Digital Toolbox
+This project makes use of the Python language and was developed in the Jupiter Notebooks environment. It uses a suite of libraries to work with Microsoft Excel input and to manipulte the data. 
+
+One critical tools that I learned during this project was requests. This library enabled me to access an Application Programming Interface (API) that interacts with the UniProt. I was then able to build code around the idea of accessing this API to search massive amounts of up to date data (~500,000,000 sequences) quickly. 
+
+In addition to the requests library, I also used the following libraries for various data munging, manipulation and visualisation tasks:
+
+* sys 
+* re 
+* requests
+* numpy
+* pandas
+* functools
+* time
+* glob
+* matplotlib
+* seaborn
+
+Prior to data school, I hadn't writen a single piece of Python code. Now it may even by my favourite language! 
+
+## Favourite tool
+
+I could not have made this project work without regex. It is so powerful at extracting exactly what you need from the mess that the UniProt API spits out. 
+
+# Challenges
+
+My main challenge was in creating regex that worked how I needed them to. I spent a lot of time making a very large regex that (eventually) did what I needed it to; however, a quick lesson FRom Andrew went a long way.
+<br/>
+<br/>
+<br/>
+
+**What we want to know**
+
+![](resources/img/ProtPep.png){width=1800px}
+
+<br/>
+
+**Getting what I want**
+
+![](resources/img/extractText.png){width=1800px}
+
+# Next steps
+
+This project has helped me to acquire a really good understanding of how to use APIs to access information from remote data sources. It has worked really well so far for small scale lists of peptides; however, when scaling up, the time required to complete the for loop blows out. To get around this I am exploring how to launch a HPC enabled version that can send many requests to the API at the same time.
+
+<br/>
+<br/>
+<br/>
+
+
+
+
+# My Data School Experience
+
+This poster is mostly about your synthesis project. However we would also like to hear about other
+parts of your Data School experience. What aspects of the program did you really enjoy? How have you
+been applying the skills you have learned in your daily work? Have you been able to transfer this 
+knowledge to your team members? Concrete examples demonstrating this would be useful here
+(meetings/talks/collaborations/new roles). Any descriptions of the personal impact the program has 
+had are welcome here as well
+
+This section will also be shifted outside the two column format (to the bottom -- the focus of this
+poster should be on your achievements in your project!). As with the Introduction, don't change the
+name of this section otherwiseit will not be able to be moved.
+
