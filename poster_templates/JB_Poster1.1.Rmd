@@ -42,7 +42,7 @@ library(kableExtra)
 I am an analytical chemist from the Molecular Analysis Team in St Lucia, QLD. Our team specializes in proteome analysis, the large scale investigation of proteins. I had some experience with R prior to dataschool but now I am also happy to write in Python and see opportunities to code everywhere!
 
 # My Synthesis Project
-Food contaminants are a common cause of alergic reaction. Accurate food labelling is critical for cunsumers to make informed decisions regarding their choice of foods. Our laboratory specialises in the detection of food components or contaminants using the analytical chemistry technique known as liquid chromatography - mass spectrometry. The specific components that we detect are called peptides. These compounds are bio-polymers, which are produced when proteins are chopped into smaller pieces using an enzyme. The resulting peptide sequences may be specific to a single protein in a single species, or may be found in multiple different proteins and/or species. It is important to know how many and which species a peptide may be found in, so that when a peptide is used to detect and quantify a contaminant, one can be certain that the peptide is specific for the target contaminant.
+Food contaminants are a common cause of alergic reaction. Accurate food labelling is critical for consumers to make informed decisions regarding their choice of foods. Our laboratory specialises in the detection of food components or contaminants using the analytical chemistry technique known as liquid chromatography - mass spectrometry. The specific components that we detect are called peptides. These compounds are bio-polymers, which are produced when proteins are chopped into smaller pieces using an enzyme. The resulting peptide sequences may be specific to a single protein in a single species, or may be found in multiple different proteins and/or species. It is important to know how many and which species a peptide may be found in, so that when a peptide is used to detect and quantify a contaminant, one can be certain that the peptide is specific for the target contaminant.
 
 This project set out to access the Universal protein resource (UniProt) to retrieve species specificity information for any list of peptides. This information can then be used to determine if a peptide is suitable as a proxy when measuring a food component or contaminant.
 
@@ -58,7 +58,7 @@ Prior to data school, I hadn't writen a single piece of Python code. Now it may 
 
 ## Favourite tool
 
-I could not have made this project work without regex. It is so powerful at extracting exactly what you need from the mess that the UniProt API spits out. 
+I could not have made this project work without regex. It is so powerful at extracting exactly what you need from the mess that the UniProt API spits out. Check out [Regex101.com](http://Regex101.com) for troubleshooting; it made a big difference for me.
 
 # Challenges
 
